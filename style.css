@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap');
+
+:root{
+--Blue-600: hsl(185, 75%, 39%);
+--Navy-950: hsl(229, 23%, 23%);
+--Gray-500: hsl(227, 10%, 46%);
+--Gray-100: hsl(225, 10%, 92%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+     font-family: "Kumbh Sans", sans-serif;
+     background-color: var(--Blue-600);
+     color: var(--Gray-500);
+     height:100vh;
+     width: 100%;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+/* style bg-top */
+.bg-top{
+    position: absolute;
+    background: url(images/bg-pattern-top.svg) no-repeat;
+    width: 978px;
+    height:978px;
+    top:-70%;
+    right: 50%;
+}
+/* style bg-bottom */
+.bg-bottom{
+    position: absolute;
+    background: url(images/bg-pattern-bottom.svg) no-repeat;
+    width: 978px;
+    height:978px;
+    top:55%;
+    right: 47;
+}
+/* style the card */
+.card{
+    max-width:400px;
+    background-color: #fff;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+}
+.card .imge{
+    position:relative
+}
+.card .imge .bg-card{
+    border-radius:15px 15px 0px 0px ;
+    width: 100%;
+}
+.card .imge .avatar{
+    max-width:90px;
+    border-radius: 50%;
+    outline: 5px solid #fff;
+    position: absolute;
+    left: 50%;
+    top:100%;
+    transform:translate(-50%, -50%);
+}
+.card .title{
+    margin: 65px 0 30px;
+}
+.card .title h3{
+    margin-bottom: 5px;
+}
+
+.card .title h3 span{
+    color: var(--Gray-500);
+}
+
+.card .stats{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-top: 2px solid var(--Gray-500);
+    padding:30px 40px;
+
+}
+h3{
+    color: var(--Navy-950);
+    font-weight: 700;
+}
+
+/* responsive */
+@media(max-width:376px){
+    html{
+        padding: 20px;
+
+    }
+    .card{
+        max-width: 300px;
+    }
+    .bg-top{
+        top:-110%;
+    }
+    .bg-bottom{
+        top:45%;
+        left:30%;
+    }
+}
